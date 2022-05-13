@@ -16,8 +16,14 @@
     <!-- VUEJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
-<body>
-    
+<body style="font-family: sans-serif;">
+    <div id="root">
+        <h2>Lista emails random generata con API by Boolean</h2>
+        <ul class="emails-list"
+        v-if="emailsArray.length >= 10">
+            <li style="margin-bottom: 10px;" v-for="email in emailsArray">{{ email }}</li>
+        </ul>
+    </div>
     <!-- SCRIPT -->
     <script src="js/script.js"></script>
 </body>
